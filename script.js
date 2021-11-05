@@ -13,5 +13,14 @@ function compute()
 
 function rateUpdate(){
     var rateValue = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText = rateValue;
+    document.getElementById("interestVal").innerHTML = document.getElementById("rate").value;
+}
+
+function validAmount(){
+    var principal = document.getElementById("principal").value;
+    var moreThanZero = parseInt(principal) >0;
+    if (!moreThanZero) {
+        alert("Please enter a positive number");
+        document.getElementById("principal").focus()
+    }
 }
